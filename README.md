@@ -53,7 +53,7 @@ Part 1 focuses on the initial planning and development of the GREY PITORI websit
 GREY PITORI
 │
 ├── Home
-│   ├─hop now
+│   ├─Shop now
 │
 ├── Shop
 │   ├─ Collection + prices
