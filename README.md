@@ -1,3 +1,5 @@
+# makitla_ST10491110_WEDE5020_POE
+This is my Web Development Project folder
 # GREY PITORI
 ## Student Information
 
@@ -66,6 +68,7 @@ GREY PITORI
 │   ├─Email sign up
 │
 └── Contact Us
+│   ├─Quick links to pages
     ├─Email
     ├─Phone number
     ├─Location
