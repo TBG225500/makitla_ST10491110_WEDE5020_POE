@@ -7,7 +7,7 @@ This is my Web Development Project folder
 **Student Number:** ST10491110  
 **Course:** Diploma in IT Management  
 **Module:** WEDE5020  
-**Part:** Part 1
+**Part:** Part 1,2
 ## Project Overview
 
 GREY PITORI is a South African lifestyle brand inspired by Pretoria, also known as Pitori. The brand represents the intersection of people, cultures, perspectives and ambition.
@@ -47,6 +47,10 @@ The website is designed to provide visitors with information about the GREY PITO
 ## Part 1 Details
 
 Part 1 focuses on the initial planning and development of the GREY PITORI website. This includes the website structure, sitemap, initial HTML development, website content and GitHub repository setup.
+
+## Part 2 Details
+
+Part 2 focuses on fixing any mistakes the lecturer pointed out in Part 1 and record all those fixes in the Changelog section of my README. Then for desktop, I must create one external style.css file, link it to all my pages, and use it to set my base styles like fonts and colours with a CSS reset, style my text, create my layout with Flexbox or Grid, and add visual styles like colours and hover effects. After that i need to make it responsive so it switches from multi-columns on desktop to a single column on tablet and mobile using media queries, relative units like em, rem, and %, and responsive images. Finally i must test it in my browser dev tools, take screenshots of desktop, tablet and mobile to put in my README, and commit and push all my changes and updated README to GitHub.
 
 ## Sitemap
 
