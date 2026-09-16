@@ -1,0 +1,376 @@
+/* GREY PITORI - Global Stylesheet
+   Black, white, grey space between - where the brand lives. */
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, h4, p, figure, form { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+input, button { font: inherit; color: inherit; } 
+
+/* ---- Design tokens ---- */
+:root {
+    --gp-black: #000000;
+    --gp-white: #ffffff;
+    --gp-charcoal: #333333;
+    --gp-grey: #666666;
+    --gp-grey-light: #999999;
+    --gp-linen: #cccccc;
+
+    --font-display: 'Archivo Black', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --gap: clamp(20px, 3vw, 24px);
+    --max-width: 1180px;
+}
+
+/* ---- Base ---- */
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gp-black);
+    background: var(--gp-white);
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color:inherit; text-decoration: none; }
+
+hr {
+    border: none;
+    border-top: 1px solid var(--gp-line);
+    margin: var(--gap) 0;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gap) 64px;
+}
+
+/* ---- Masthead (brand wordmark, every page) ---- */
+.masthead {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 28px 16px 20px;
+    color: var(--gp-black);
+}
+
+/* ---- Navigation ---- */
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    padding: 16px 24px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 32px;
+}
+
+header a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease-in-out, color 0.2s ease;
+}
+
+header a:hover, header a:focus-visible {
+    border-bottom-color: var(--gp-black);
+}
+
+/* ---- Page title (per page, inside <main>) ---- */
+.page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    padding: 40px 0 32px;
+}
+
+/* ---- Buttons & inputs ----
+     Black & white on interaction: the transition passes through grey, which is the whole point of the brand. */
+
+.shop-button, button[type="submit"] {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    border: 2px solid var(--gp-black);
+    background: var(--gp-black);
+    color: var(--gp-white);
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.shop-button:hover, .shop-button:focus-visible, button[type="submit"]:hover, button[type="submit"]:focus-visible {
+    background: var(--gp-white);
+    color: var(--gp-black);
+}
+
+/* ---- Hero (home) ---- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-top: 16px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---- Shop grid ---- */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--gap);
+    margin-top: 16px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gp-line);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.product-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    letter-spacing: 0.16px;
+}
+
+.product-card .price,
+.product-card p {
+    font-size: 0.875rem;
+    color: var(--gp-grey);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.add-to-cart {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1.5px solid var(--gp-black);
+    background: transparent;
+    color: var(--gp-black);
+    white-space: nowrap;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.add-to-cart:hover, .add-to-cart:focus-visible {
+    background: var(--gp-black);
+    color: var(--gp-white);
+}
+
+/* ---- Gallery (lookbook) ---- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8px;
+    margin-top: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.gallery img:hover, .gallery img:focus-visible {
+    transform: scale(1.035);
+}
+
+/* ---- Story (editorial) ---- */
+.story {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.story p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gp-grey);
+}
+
+.story p:nth-last-of-type(3) {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.story img {
+    margin-top: 16px;
+}
+
+/* ---- Join the Icons ---- */
+.intro {
+    max-width: 52ch;
+    margin: 0 auto 32px;
+    text-align: center;
+    color: var(--gp-grey);
+}
+
+main > h2 {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+}
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.signup-form input[type="email"] {
+    flex: 1 1 240px;
+    padding: 12px 16px;
+    border: 2px solid var(--gp-black);
+    background: var(--gp-white);
+    color: var(--gp-black);
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--gp-grey-light);
+    margin-top: 16px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 56px;
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--gp-black);
+}
+
+.stat-label {
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--gp-grey);
+    margin-top: 4px;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+    border-top: 1px solid var(--gp-line);
+    padding: var(--gap) 0;
+}
+
+.footer-top {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand { max-width: 32ch; }
+
+.footer-brand h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.footer-brand p { color: var(--gp-grey); }
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 56px;
+}
+
+.footer-col h4 {
+    font-size: 0.75rem;
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding-top: 24px;
+    font-size: 0.8rem;
+    color: var(--gp-grey);
+}
+
+/* ---- Accessibility and Motion ---- */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gp-black);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---- Small screens ---- */
+@media (max-width: 480px) {
+    .masthead { padding-top: 20px; }
+    .footer-links { gap: 28px; }
+    header { gap: 16px 20px; padding: 12px 16px; }
+}

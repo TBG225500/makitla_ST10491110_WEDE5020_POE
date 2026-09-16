@@ -89,7 +89,19 @@ GREY PITORI
 - Created the GitHub repository.
 - Created the README.md file.
 
+### Version 1.0 - Part 2
+
+- Made updates and changes based on part 1 feedback.
+- Added an external stylesheet and linked it in all pages.
+- Applied basic styles.
+- Applied decoration and colour styles.
+- Applied Pseudo-classes.
+- Applied media queries and made website fully responsive and made sure it adapts seamlessly to different screen sizes.
+- Included comments in my style.css code.
+
 ## References
 
-Visual Studio Code. (2026). Visual Studio Code. Available at: https://code.visualstudio.com/
+- Visual Studio Code. (2026). Visual Studio Code. Available at: https://code.visualstudio.com/
 GitHub. (2026). GitHub Documentation. Available at: https://docs.github.com/
+- W3schools. (2026). W3schools. Available at : https://www.w3schools.com/ (2026).
+
