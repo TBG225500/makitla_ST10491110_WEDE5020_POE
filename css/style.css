@@ -60,23 +60,37 @@ main {
 }
 
 /* ---- Navigation ---- */
+.brand-title {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 32px;
+    background: white;
+}
 header {
-    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #4b4848;
+    padding: 22px 0;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px 32px;
-    padding: 16px 24px;
 }
 
 header nav {
+    position: static;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px 32px;
+    align-items: center;
+    gap: 40px;
 }
 
 header a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
     font-size: 0.8rem;
+    position: sticky;
     font-weight: 600;
     letter-spacing: 1.28px;
     text-transform: uppercase;
@@ -87,6 +101,29 @@ header a {
 
 header a:hover, header a:focus-visible {
     border-bottom-color: var(--gp-black);
+}
+
+.toplinks a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+}
+
+.toplinks a.active {
+  color: #f8f4f4;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+#toplinks a.active {
+    color: rgb(244, 238, 238);
+    text-decoration: underline !important;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+.toplinks a:hover {
+  color: #f4f0f0; /* your grey */
 }
 
 /* ---- Page title (per page, inside <main>) ---- */
