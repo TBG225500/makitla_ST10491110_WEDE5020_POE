@@ -102,6 +102,8 @@ GREY PITORI
 - Applied Pseudo-classes.
 - Applied media queries and made website fully responsive and made sure it adapts seamlessly to different screen sizes.
 - Included comments in my style.css code.
+- Included color on the navigation bar.
+- Centered the navigation bar.
 
 ## References
 
