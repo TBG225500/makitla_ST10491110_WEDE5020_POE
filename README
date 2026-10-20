@@ -12,6 +12,7 @@ About the Brand
 GREY PITORI's visual identity is built on black and white, with grey representing the connection and space between them. The website carries this idea through its colour palette, typography and layout, and presents the brand through a bold, street-style look.
 
 Website Goals and Objectives
+
 - Create an online presence for GREY PITORI.
 - Showcase GREY PITORI products.
 - Allow users to explore the brand's story.
@@ -22,6 +23,7 @@ Website Goals and Objectives
 
 Key features and functionality
 |Page | File | Purpose|
+
 |---|---|---|
 |Home | index.html | Landing page and brand introduction|
 |Shop | shop.html | Product range: tees, hoodies, tote bags, side bags and socks|
@@ -34,7 +36,7 @@ Part 1 Details
 Part 1 focuses on the initial planning and development of the GREY PITORI website. This includes the website structure, sitemap, initial HTML development, website content and GitHub repository setup.
 
 Part 2 Details
-Part 2 focuses on fixing any mistakes the lecturer pointed out in Part 1 and record all those fixes in the Changelog section of my README. Then for desktop, I must create one external style.css file, link it to all my pages, and use it to set my base styles like fonts and colours with a CSS reset, style my text, create my layout with Flexbox or Grid, and add visiual styles like colours and hover effects. After that i need to make it responsive so it switches from multi-columns on desktop to a single column on tablet and mobile using media queries, relative units like em, rem, and %, and responsive images. Finally i must test it in my browser dev tools, take screenshots of desktop, tablet and mobile to put in my README, and commit and push all my changes and updated README to GitHub. 
+Part 2 focuses on fixing any mistakes the lecturer pointed out in Part 1 and record all those fixes in the Changelog section of my README. Then for desktop, I must create one external style.css file, link it to all my pages, and use it to set my base styles like fonts and colours with a CSS reset, style my text, create my layout with Flexbox or Grid, and add visiual styles like colours and hover effects. After that i need to make it responsive so it switches from multi-columns on desktop to a single column on tablet and mobile using media queries, relative units like em, rem, and %, and responsive images. Finally i must test it in my browser dev tools, take screenshots of desktop, tablet and mobile to put in my README, and commit and push all my changes and updated README to GitHub.  
 
 Project Structure
 ST10491110_Thabang_WEDE5020_POE_P1/
