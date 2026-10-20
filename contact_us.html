@@ -4,65 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grey Pitori | Contact Us</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="page-title">GREY PITORI</h1>
+    <h1 class="masthead">GREY PITORI</h1>
+
+    <div class="announce">Free delivery in South Africa on orders over R500</div>
 
     <header>
-        <nav id="toplinks">
-           <a href="index.html">Home</a> &nbsp;
-           <a href="shop.html">Shop</a> &nbsp;
-           <a href="our_story.html">Our Story</a> &nbsp;
-           <a href="lookbook.html">Lookbook</a> &nbsp;
-           <a href="join_the_icons.html">Join the Icons</a> &nbsp;
-           <a href="contact_us.html" class="active">Contact us</a> &nbsp;
+        <nav id="toplinks" class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="our_story.html">Our Story</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="join_the_icons.html">Join the Icons</a>
+            <a href="contact_us.html" class="active">Contact us</a>
         </nav>
-   </header>  
+    </header>
 
-   <hr>
+    <hr>
 
-   <main>
-         <h1 class="page-title">CONTACT US</h1>
-   </main>
+    <main>
+        <h1 class="page-title">CONTACT US</h1>
+    </main>
+ <form data-form>
+    <div class="field">
+     <label for="contact-message">Message</label>
+     <textarea id="contact-message" name="message" required minlength="10" data-msg-required="Write your message." data-msg-short="Write at least 10 characters so we can help." aria-describedby="contact-message-err"></textarea>
+     <p class="field-error" id="contact-message-err" hidden></p>
+    </div>
+    <button type="submit" class="btn">Send message</button>
+ </form>
 
-   <hr>
+    <hr>
 
-   <footer class="site-footer">
-       <div class="footer-top">
-           <div class="footer-brand">
-               <h2>GREY PITORI</h2>
-               <p>
-                  A South African lifestyle brand
-                 <br>
-                  honouring individuality and celebrating
-                 <br>
-                  the spirit of Pitori — one collection at a time.
-               </p>
-           </div>
-
-           <div class="footer-links">
-               <div class="footer-column">
-                   <h4>SHOP</h4>
-                   <p>New Drop</p>
-                   <p>Best Sellers</p>
-                   <p>Lookbook</p>
-           </div>
-
-           <div class="footer-column">
-                <h4>BRAND</h4>
-                <p>Our Story</p>
-                <p>Join the Icons</p>
-                <p>Mission & Vision</p>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>GREY PITORI</h2>
+                <p>
+                    A South African lifestyle brand
+                    honouring individuality and celebrating
+                    the spirit of Pitori — one collection at a time.
+                </p>
             </div>
-            
-            <div class="footer-column">
-                <h4>CONTACT</h4>
-                <p>greypitori012@gmail.com</p>
-                <p>Pretoria, South Africa</p>
-                <p>www.greypitori.co.za</p>
-                <p>061 401 2444</p>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <p>New Drop</p>
+                    <p>Best Sellers</p>
+                    <p>Lookbook</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>BRAND</h4>
+                    <p>Our Story</p>
+                    <p>Join the Icons</p>
+                    <p>Mission & Vision</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>CONTACT</h4>
+                    <p>greypitori012@gmail.com</p>
+                    <p>Pretoria, South Africa</p>
+                    <p>www.greypitori.co.za</p>
+                    <p>061 401 2444</p>
+                </div>
             </div>
         </div>
 

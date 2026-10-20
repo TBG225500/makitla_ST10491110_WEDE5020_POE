@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grey Pitori | Shop</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1 class="page-title">GREY PITORI</h1>
+    <h1 class="masthead">GREY PITORI</h1>
 
-    <h1 class="page-title">FEATURED COLLECTIONS</h1> 
+    <div class="announce">Free delivery in South Africa on orders over R500</div>
 
     <header>
-        <nav id="toplinks">
-           <a href="index.html">Home</a>
-           <a href="shop.html" class="active">Shop</a>
-           <a href="our_story.html">Our Story</a> 
-           <a href="lookbook.html">Lookbook</a>
-           <a href="join_the_icons.html">Join the Icons</a>
-           <a href="contact_us.html">Contact us</a>
+        <nav id="toplinks" class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="our_story.html">Our Story</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="join_the_icons.html">Join the Icons</a>
+            <a href="contact_us.html">Contact us</a>
         </nav>
     </header>
-    
 
     <hr>
 
@@ -31,87 +32,62 @@
         <h1 class="page-title">SHOP</h1>
 
         <div class="shop-grid">
-           <div class="shop-item">
-               <img src="images/GP White Hoodie (front).jpeg" alt="White Hoodie">
-               <h2>WHITE HOODIE</h2>
-               <div class="price-row">
-                   <p class="price">R 380.00</p>
-                   <button class="add-to-cart">ADD TO CART</button>
-               </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP Black Hoodie (front).jpeg" alt="Black Hoodie">
-              <h2>BLACK HOODIE</h2>
-              <div class="price-row">
-                  <p class="price">R 380.00</p>
-                  <button class="add-to-cart">ADD TO CART</button>
-              </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP White Oversized Tee (front).jpeg" alt="White Oversized T-Shirt">
-              <h2>WHITE OVERSIZED T-SHIRT</h2>
-              <div class="price-row">
-                  <p class="price">R 260.00</p>
-                  <button class="add-to-cart">ADD TO CART</button>
-              </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP Black Oversized Tee (front).jpeg" alt="Black Oversized T-Shirt">
-              <h2>BLACK OVERSIZED T-SHIRT</h2>
-                <div class="price-row">
-                    <p class="price">R 260.00</p>
-                    <button class="add-to-cart">ADD TO CART</button>
-                </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP White Side bag.jpeg" alt="White Tote Bag">
-              <h2>WHITE TOTE BAG</h2>
-              <div class="price-row">
-                  <p class="price">R 200.00</p>
-                  <button class="add-to-cart">ADD TO CART</button>
-              </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP Black Side Bag.jpeg" alt="Black Tote Bag">
-              <h2>BLACK TOTE BAG</h2>
-              <div class="price-row">
-                  <p class="price">R 200.00</p>
-                  <button class="add-to-cart">ADD TO CART</button>
-              </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP White socks.jpeg" alt="White Socks (One Pair)">
-              <h2>WHITE SOCKS (ONE PAIR)</h2>
-              <div class="price-row">
-                  <p class="price">R 50.00</p>
-                  <button class="add-to-cart">ADD TO CART</button>
-              </div>
-           </div>
-           <div class="shop-item">
-              <img src="images/GP Black socks.jpeg" alt="Black Socks (One Pair)">
-              <h2>BLACK SOCKS (ONE PAIR)</h2>
-              <div class="price-row">
-                  <p class="price">R 50.00</p>
-                  <button class="add-to-cart">ADD TO CART</button>
-              </div>
-           </div>
-       </div>
-   </main>
+            <div class="product-card">
+                <img src="images\hoodie-white.jpg" alt="White hoodie, front view">
+                <h2>WHITE HOODIE</h2>
+                <p class="price">R 380.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\hoodie-black.jpg" alt="Black hoodie, front view">
+                <h2>BLACK HOODIE</h2>
+                <p class="price">R 380.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\crowntee-white.jpg" alt="White oversized t-shirt, front view">
+                <h2>WHITE OVERSIZED T-SHIRT</h2>
+                <p class="price">R 260.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\crowntee-black.jpg" alt="Black oversized t-shirt, front view">
+                <h2>BLACK OVERSIZED T-SHIRT</h2>
+                <p class="price">R 260.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\tote-white-front.jpg" alt="White tote bag">
+                <h2>WHITE TOTE BAG</h2>
+                <p class="price">R 200.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\tote-black-front.jpg" alt="Black tote bag">
+                <h2>BLACK TOTE BAG</h2>
+                <p class="price">R 200.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\socks-white.jpg" alt="White socks, one pair">
+                <h2>WHITE SOCKS (ONE PAIR)</h2>
+                <p class="price">R 50.00</p>
+            </div>
+            <div class="product-card">
+                <img src="images\socks-black.jpg" alt="Black socks, one pair">
+                <h2>BLACK SOCKS (ONE PAIR)</h2>
+                <p class="price">R 50.00</p>
+            </div>
+        </div>
+    </main>
 
-   <hr>
+    <hr>
 
-   <footer class="site-footer">
-       <div class="footer-bottom">
-           <p>© 2026 Grey Pitori Group. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>© 2026 Grey Pitori Group. All rights reserved.</p>
+            <p>
+                INSTAGRAM &nbsp;
+                TIKTOK &nbsp;
+                TWITTER/X &nbsp;
+                WHATSAPP CHANNEL
+            </p>
+        </div>
+    </footer>
 
-           <p>
-               INSTAGRAM &nbsp;
-               TIKTOK &nbsp;
-               TWITTER/X &nbsp;
-               WHATSAPP CHANNEL
-           </p>
-       </div>
-   </footer>
-   
 </body>
 </html>

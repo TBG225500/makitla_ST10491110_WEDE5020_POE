@@ -1,0 +1,76 @@
+Student Information
+Thabang Makitla
+ST10491110
+DITM
+
+
+GREY PITORI
+A South African lifestyle brand inspired by Pretoria, also known as Pitori. The brand represents the intersection of people, cultures, perspectives and ambition.
+Built as part of module WEDE5020 (Web Development), Diploma in IT Management, Portfolio of Evidence (POE).
+
+About the Brand
+GREY PITORI's visual identity is built on black and white, with grey representing the connection and space between them. The website carries this idea through its colour palette, typography and layout, and presents the brand through a bold, street-style look.
+
+Website Goals and Objectives
+- Create an online presence for GREY PITORI.
+- Showcase GREY PITORI products.
+- Allow users to explore the brand's story.
+- Display the brand's lookbook.
+- Encourage customers to shop the products.
+- Provide visitors with contact information.
+- Create a professional and user-friendly website.
+
+Key features and functionality
+|Page | File | Purpose|
+|---|---|---|
+|Home | index.html | Landing page and brand introduction|
+|Shop | shop.html | Product range: tees, hoodies, tote bags, side bags and socks|
+|Our Story | our-story.html | The brand's story and meaning behind the name|
+|Lookbook | lookbook.html | Visual showcase of the collection|
+|Join the Icons | join-the-icons.html | Community / sign-up page|
+|Contact Us | contact.html | Ways to get in touch with the brand|
+
+Part 1 Details
+Part 1 focuses on the initial planning and development of the GREY PITORI website. This includes the website structure, sitemap, initial HTML development, website content and GitHub repository setup.
+
+Part 2 Details
+Part 2 focuses on fixing any mistakes the lecturer pointed out in Part 1 and record all those fixes in the Changelog section of my README. Then for desktop, I must create one external style.css file, link it to all my pages, and use it to set my base styles like fonts and colours with a CSS reset, style my text, create my layout with Flexbox or Grid, and add visiual styles like colours and hover effects. After that i need to make it responsive so it switches from multi-columns on desktop to a single column on tablet and mobile using media queries, relative units like em, rem, and %, and responsive images. Finally i must test it in my browser dev tools, take screenshots of desktop, tablet and mobile to put in my README, and commit and push all my changes and updated README to GitHub. 
+
+Project Structure
+ST10491110_Thabang_WEDE5020_POE_P1/
+├── index.html
+├── shop.html
+├── our-story.html
+├── lookbook.html
+├── join-the-icons.html
+├── contact.html
+├── css/
+│   └── style.css        # Shared stylesheet linked on every page
+├── images/              # Product photos and crown logo
+└── README.md
+
+Technologies Used
+HTML5: semantic page structure
+CSS3: a single shared stylesheet (css/style.css) linked across all six html pages
+Visual Studio Code: development environment
+Design Notes
+Colour palette: black, white and grey
+Style: street-style clothing brand aesthetic
+Imagery: product photography (black and white tees front and back, hoodies, tote bags, side bags, socks) and the crown logo
+Consistency: all pages share one stylesheet so the header, navigation, footer and typography stay uniform
+
+How to Run
+Download or clone the project folder.
+Open the folder in VS Code (or any editor).
+Open index.html in a browser, or use the Live Server extension for auto-refresh while editing.
+Use the navigation menu to move between pages.
+
+No build tools or dependencies are required.
+
+Browser Support
+
+Designed for modern browsers (Chrome, Edge, Firefox, Safari).
+
+References
+Visual Studio Code.(2026). Visual Studio Code. Available at: [VsCode](https://code.visualstudio.com/)
+W3schools.(2026).W3schools. Available at: [W3schools](https://www.w3schools.com/)

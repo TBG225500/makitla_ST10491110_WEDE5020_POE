@@ -1,0 +1,423 @@
+/* ==========================================================================
+   GREY PITORI — Global Stylesheet
+   Black. White. And the grey space between — where the brand lives.
+   ========================================================================== */
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, h4, p, figure, form { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+input, button { font: inherit; color: inherit; }
+
+/* ---- Design tokens ---- */
+:root {
+  --gp-black:      #0a0a0a;
+  --gp-white:      #f7f6f2;
+  --gp-charcoal:   #1c1c1c;
+  --gp-grey:       #6f6f6c;
+  --gp-grey-light: #d9d8d4;
+  --gp-line:       #d3d2ce;
+
+  --font-display: 'Archivo Black', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --gap: clamp(1.25rem, 3vw, 2.5rem);
+  --max-width: 1180px;
+}
+
+/* ---- Base ---- */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--gp-white);
+  color: var(--gp-charcoal);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--gp-line);
+  margin: 0;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gap) 4rem;
+}
+
+/* ---- Masthead (brand wordmark, every page) ---- */
+.masthead {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 1.75rem 1rem 1.25rem;
+  color: var(--gp-black);
+}
+
+/* ---- Announcement ----*/
+.announce {
+  background: var(--white); color: var(--black); text-align: center;
+  font-size: .85rem; font-weight: 500; padding: .55rem var(--pad);
+  border-bottom: var(--line) solid var(--black);
+}
+
+/* ---- Navigation ---- */
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  padding: 1rem 1.5rem;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 8px;
+}
+
+nav a.active {
+  border-bottom: 3px solid black;
+}
+
+.navbar {
+  display:flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+header a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+header a:hover,
+header a:focus-visible {
+  border-bottom-color: var(--gp-black);
+}
+
+/* ---- Hide the 3-line button on large screens ---- */
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ----When the screen is small, show the 3-line button and hide the nav links ---- */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .toplinks {
+    display: none;
+    flex-direction: column;
+    position:center;
+    top: 70px;
+    right: 10px;
+    background-color: var(--gp-white);
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    z-index: 1000;
+  }
+  .toplinks .active {
+    display: flex;
+  }
+}
+
+/* ---- Page title (per page, inside <main>) ---- */
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+}
+
+/* ---- Buttons & inputs ----
+   Black → white on interaction: the transition itself passes through
+   grey, which is the whole point of the brand. */
+.shop-btn,
+button[type="submit"] {
+  display: inline-block;
+  background: var(--gp-black);
+  color: var(--gp-white);
+  border: 2px solid var(--gp-black);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.shop-btn:hover, .shop-btn:focus-visible,
+button[type="submit"]:hover, button[type="submit"]:focus-visible {
+  background: var(--gp-white);
+  color: var(--gp-black);
+}
+
+/* ---- Hero (home) ---- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.hero img {
+  width: min(420px, 100%);
+}
+
+/* ---- Shop grid ---- */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+  margin-top: 1rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gp-line);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.product-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+}
+
+.product-card .price,
+.product-card p {
+  color: var(--gp-grey);
+  font-weight: 500;
+}
+
+/* ---- Gallery (lookbook) ---- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.035);
+}
+
+/* ---- Story (editorial) ---- */
+.story {
+  max-width: 62ch;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.story p {
+  font-size: 1.05rem;
+}
+
+.story p:nth-of-type(3) {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  line-height: 1.4;
+}
+
+.story img {
+  margin-top: 1rem;
+}
+
+/* ---- Join the Icons ---- */
+.intro {
+  max-width: 52ch;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--gp-grey);
+}
+
+main > h2 {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.signup-form input {
+  flex: 1 1 240px;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--gp-grey-light);
+  background: transparent;
+}
+
+.signup-form input:focus-visible {
+  outline: 2px solid var(--gp-black);
+  outline-offset: 2px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gp-grey);
+  margin-top: 1rem;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: var(--gp-black);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gp-grey);
+  margin-top: 0.25rem;
+}
+
+.field { display: grid; gap: .35rem; margin-bottom: 1.2rem; }
+.field label, .field legend { font-weight: 600; font-size: .95rem; }
+.field .hint { font-size: .85rem; color: var(--g600); font-weight: 400; }
+input[type="text"], input[type="email"], input[type="tel"], select.input, textarea {
+    font: inherit; width: 100%; padding: .85rem .9rem;
+    background: var(--white); color: var(--black);
+    border: var(--line) solid var(--black); border-radius: 0;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  border-top: 1px solid var(--gp-line);
+  padding: var(--gap);
+}
+
+.footer-top {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer-brand { max-width: 32ch; }
+
+.footer-brand h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand p { color: var(--gp-grey); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 3.5rem;
+}
+
+.footer-col h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.footer-col p {
+  color: var(--gp-grey);
+  margin-bottom: 0.4rem;
+}
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--gp-grey);
+}
+
+/* ---- Accessibility & motion ---- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gp-black);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; }
+}
+
+/* ---- Small screens ---- */
+@media (max-width: 480px) {
+  .masthead { padding-top: 1.25rem; }
+  header { gap: 1rem 1.25rem; padding: 0.75rem 1rem; }
+  .footer-links { gap: 1.75rem; }
+}

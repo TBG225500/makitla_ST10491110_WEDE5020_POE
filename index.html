@@ -2,52 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grey Pitori | Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Grey Pitori | Streetwear Brand</title>
+    <meta name="description" content="Grey Pitori is a South African streetwear brand that offers a range of stylish and trendy clothing for men and women.">
+    <meta name="revisit" content="30 days">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  <h1 class="brand-title">GREY PITORI</h1> 
+    <h1 class="masthead">GREY PITORI</h1>
 
-  <header>
-    <nav id="toplinks">
-      <a href="index.html" class="active">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="our_story.html">Our Story</a>
-      <a href="lookbook.html">Lookbook</a>
-      <a href="join_the_icons.html">Join the Icons</a>
-      <a href="contact_us.html">Contact us</a>
-    </nav>
-  </header>
+    <div class="announce">Free delivery in South Africa on orders over R500</div>
 
-  <hr>
-  <main>
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="toplinks" class="site-nav" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="our_story.html">Our Story</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="join_the_icons.html">Join the Icons</a>
+            <a href="contact_us.html">Contact us</a>
+        </nav>
+    </header>
 
-    <h1 class="page-title">HOME</h1>
+    <hr>
 
-    <div class="hero">
-      <a href="shop.html" class="shop-btn">SHOP NOW</a>
-      <img src="images/GP Logo.jpeg" width="400" height="50" alt="Grey Pitori Logo">
-    </div>
+    <main>
+        <h1 class="page-title">HOME</h1>
 
-  </main>
+        <div class="hero">
+            <img src="images\crown-black.png" width="400" height="400" alt="Grey Pitori logo">
+            <a href="shop.html" class="shop-btn">SHOP NOW</a>
+        </div>
+    </main>
 
-  <hr>
+    <hr>
 
-  <footer class="site-footer">
-    <div class="footer-bottom">
-
-      <p>© 2026 Grey Pitori Group. All rights reserved.</p>
-
-      <p>
-        INSTAGRAM &nbsp;
-        TIKTOK &nbsp;
-        TWITTER/X &nbsp;
-        WHATSAPP CHANNEL
-      </p>
-    </div>
-  </footer>
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>© 2026 Grey Pitori Group. All rights reserved.</p>
+            <p>
+                INSTAGRAM &nbsp;
+                TIKTOK &nbsp;
+                TWITTER/X &nbsp;
+                WHATSAPP CHANNEL
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
