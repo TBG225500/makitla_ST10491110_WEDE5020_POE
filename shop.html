@@ -16,6 +16,7 @@
     <div class="announce">Free delivery in South Africa on orders over R500</div>
 
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="toplinks" class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="shop.html" class="active">Shop</a>
@@ -24,6 +25,11 @@
             <a href="join_the_icons.html">Join the Icons</a>
             <a href="contact_us.html">Contact us</a>
         </nav>
+        <form class="site-search" action="shop.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Search products</label>
+          <input type="search" id="q" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
     </header>
 
     <hr>
@@ -35,44 +41,53 @@
             <div class="product-card">
                 <img src="images\hoodie-white.jpg" alt="White hoodie, front view">
                 <h2>WHITE HOODIE</h2>
-                <p class="price">R 380.00</p>
+                <p class="price"><b>R 380.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\hoodie-black.jpg" alt="Black hoodie, front view">
                 <h2>BLACK HOODIE</h2>
-                <p class="price">R 380.00</p>
+                <p class="price"><b>R 380.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\crowntee-white.jpg" alt="White oversized t-shirt, front view">
                 <h2>WHITE OVERSIZED T-SHIRT</h2>
-                <p class="price">R 260.00</p>
+                <p class="price"><b>R 260.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\crowntee-black.jpg" alt="Black oversized t-shirt, front view">
                 <h2>BLACK OVERSIZED T-SHIRT</h2>
-                <p class="price">R 260.00</p>
+                <p class="price"><b>R 260.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\tote-white-front.jpg" alt="White tote bag">
                 <h2>WHITE TOTE BAG</h2>
-                <p class="price">R 200.00</p>
+                <p class="price"><b>R 200.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\tote-black-front.jpg" alt="Black tote bag">
                 <h2>BLACK TOTE BAG</h2>
-                <p class="price">R 200.00</p>
+                <p class="price"><b>R 200.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\socks-white.jpg" alt="White socks, one pair">
                 <h2>WHITE SOCKS (ONE PAIR)</h2>
-                <p class="price">R 50.00</p>
+                <p class="price"><b>R 50.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
             <div class="product-card">
                 <img src="images\socks-black.jpg" alt="Black socks, one pair">
                 <h2>BLACK SOCKS (ONE PAIR)</h2>
-                <p class="price">R 50.00</p>
+                <p class="price"><b>R 50.00</b></p>
+                <button class="btn">Add to cart</button>
             </div>
         </div>
+        <p id="no-results" hidden>No products found.</p>
     </main>
 
     <hr>

@@ -16,6 +16,7 @@
     <div class="announce">Free delivery in South Africa on orders over R500</div>
 
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="toplinks" class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -31,13 +32,17 @@
     <main>
         <h1 class="page-title">CONTACT US</h1>
     </main>
- <form data-form>
-    <div class="field">
-     <label for="contact-message">Message</label>
-     <textarea id="contact-message" name="message" required minlength="10" data-msg-required="Write your message." data-msg-short="Write at least 10 characters so we can help." aria-describedby="contact-message-err"></textarea>
-     <p class="field-error" id="contact-message-err" hidden></p>
-    </div>
-    <button type="submit" class="btn">Send message</button>
+ <form class="contact-form" action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send message</button>
  </form>
 
     <hr>

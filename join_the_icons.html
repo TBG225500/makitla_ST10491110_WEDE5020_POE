@@ -16,6 +16,7 @@
     <div class="announce">Free delivery in South Africa on orders over R500</div>
 
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="toplinks" class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -24,6 +25,11 @@
             <a href="join_the_icons.html" class="active">Join the Icons</a>
             <a href="contact_us.html">Contact us</a>
         </nav>
+        <form class="site-search" action="shop.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Search products</label>
+          <input type="search" id="q" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
     </header>
 
     <hr>

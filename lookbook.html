@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -16,6 +17,7 @@
     <div class="announce">Free delivery in South Africa on orders over R500</div>
 
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="toplinks" class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -24,25 +26,71 @@
             <a href="join_the_icons.html">Join the Icons</a>
             <a href="contact_us.html">Contact us</a>
         </nav>
+        <form class="site-search" action="shop.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Search products</label>
+          <input type="search" id="q" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
     </header>
 
     <hr>
 
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+       <div class="lightbox-inner">
+         <img id="lightbox-img" src="" alt="">
+         <div class="lightbox-bar">
+             <p id="lightbox-caption"></p>
+             <button type="button" class="modal-close" id="lightbox-close">Close</button>
+         </div>
+       </div>
+    </dialog>
+
     <main>
         <h1 class="page-title">GALLERY</h1>
 
-        <div class="gallery">
+        <section class="section" style="padding-top:1.5rem" aria-label="Looks">
+        <div class="wrap">
+        <div class="gallery" id="gallery">
             <img class="gallery-item" src="images\crown-black.png" alt="Grey Pitori logo">
-            <img class="gallery-item" src="images\hoodie-black.jpg" alt="Black hoodie, front view">
-            <img class="gallery-item" src="images\hoodie-white.jpg" alt="White hoodie, front view">
-            <img class="gallery-item" src="images\tote-black-front.jpg" alt="Black tote bag">
-            <img class="gallery-item" src="images\tote-white-front.jpg" alt="White tote bag">
-            <img class="gallery-item" src="images\socks-black.jpg" alt="Black socks">
-            <img class="gallery-item" src="images\socks-white.jpg" alt="White socks">
-            <img class="gallery-item" src="images\story-tote.jpg" alt="Grey Pitori bag, alternate view">
-            <img class="gallery-item" src="images\tee-black-front.jpg" alt="Black oversized t-shirt, front view">
-            <img class="gallery-item" src="images\tee-white-front.jpg" alt="White oversized t-shirt, front view">
+            <button type="button" class="look" data-src="images\look\hoodie-black.jpg" data-caption="White Crown Hoodie" data-alt="Black hoodie with a white crown on the chest" data-tone="black">
+            <img class="gallery-item" src="images\hoodie-black.jpg" alt="White Crown Hoodie" loading="lazy">
+            <span>White Crown Hoodie</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\hoodie-white.jpg" data-caption="Black Crown Hoodie" data-alt="White hoodie with a black crown on the chest" data-tone="white">
+            <img class="gallery-item" src="images\hoodie-white.jpg" alt="Black Crown Hoodie" loading="lazy">
+            <span>Black Crown Hoodie</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\tote-black.jpg" data-caption="Black Tote Bag" data-alt="Black tote bag" data-tone="black">
+            <img class="gallery-item" src="images\tote-black-front.jpg" alt="Black tote bag" loading="lazy">
+            <span>Black Tote bag</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\tote-white.jpg" data-caption="White Tote Bag" data-alt="White tote bag" data-tone="white">
+            <img class="gallery-item" src="images\tote-white-front.jpg" alt="White tote bag" loading="lazy">
+            <span>White Tote bag</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\socks-black.jpg" data-caption="White Crown Socks" data-alt="Black socks" data-tone="black">
+            <img class="gallery-item" src="images\socks-black.jpg" alt="White Crown Socks" loading="lazy">
+            <span>White Crown Socks</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\socks-white.jpg" data-caption="Black Crown Socks" data-alt="White socks" data-tone="white">
+            <img class="gallery-item" src="images\socks-white.jpg" alt="Black Crown Socks" loading="lazy">
+            <span>Black Crown Socks</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\society-tote.jpg" data-caption="Society Tote Bag" data-alt="Grey Pitori bag, alternate view" data-tone="grey">
+            <img class="gallery-item" src="images\society-tote.jpg" alt="Grey Pitori bag, alternate view" loading="lazy">
+            <span>Society Tote Bag</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\tee-black-front.jpg" data-caption="Black Oversized T-shirt" data-alt="Black oversized t-shirt, front view" data-tone="black">
+            <img class="gallery-item" src="images\tee-black-front.jpg" alt="Black oversized t-shirt, front view" loading="lazy">
+            <span>Black Oversized T-shirt</span>
+            </button>
+            <button type="button" class="look" data-src="images\look\tee-white-front.jpg" data-caption="White Oversized T-shirt" data-alt="White oversized t-shirt, front view" data-tone="white">
+            <img class="gallery-item" src="images\tee-white-front.jpg" alt="White oversized t-shirt, front view" loading="lazy">
+            <span>White Oversized T-shirt</span>
+            </button>
         </div>
+        </div>
+        </section>
     </main>
 
     <hr>
