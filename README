@@ -77,6 +77,38 @@ Browser Support
 
 Designed for modern browsers (Chrome, Edge, Firefox, Safari).
 
+Changelog
+(All notable changes made to the Grey Pitori website are documented in this file.)
+10 August 2026 - 21 October 2026
+Added
+- Created the initial Grey Pitori website structure using HTML.
+- Added website navigation links, including Home, About Us, Shop, and Contact Us.
+- Created the main homepage layout.
+- Added product sections to display products, images, names, and prices.
+- Added website content to introduce the Grey Pitori brand.
+- Created and linked an external style.css file for website styling.
+- Added Git version control to track changes to the project.
+
+Changed
+- Improved the navigation bar styling and layout.
+- Updated the active navigation link to display an underline on the current page.
+- Improved the positioning and alignment of website elements.
+- Updated page layouts to improve consistency across the website.
+- Adjusted footer positioning and page spacing.
+- Improved product image presentation and layout.
+
+Fixed
+- Fixed issues with the CSS stylesheet not applying correctly.
+- Corrected navigation underline behaviour between pages.
+- Fixed page visibility issues when navigating between website sections.
+- Corrected footer alignment issues.
+- Addressed button interaction and clickability issues.
+- Fixed layout issues affecting the appearance of website elements.
+
+In Progress
+- Further improving the website's responsiveness and overall user experience.
+- Continuing to refine the website's visual design and layout.
+
 References
 Visual Studio Code.(2026). Visual Studio Code. Available at: [VsCode](https://code.visualstudio.com/)
 W3schools.(2026).W3schools. Available at: [W3schools](https://www.w3schools.com/)

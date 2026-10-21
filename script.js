@@ -60,9 +60,6 @@ document.querySelectorAll('.look').forEach(btn => {
   });
 });
 
-document.getElementById('lightbox-close').addEventListener('click', () => box.close());
-box.addEventListener('click', e => { if (e.target === box) box.close(); });
-
 /* ---- Navigation ---- */
 function toggleMenu() {
   document.getElementById("toplinks").classList.toggle("open");
@@ -91,4 +88,50 @@ if (cards.length) {
     filterProducts(params.get('q'));
   }
   input.addEventListener('input', () => filterProducts(input.value));
+}
+
+/* ---- Product search (works on shop.html, safely ignored elsewhere) ---- */
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const rawQuery = (params.get('q') || '').trim();
+
+  /* ---- Keep the searched term visible in the search box ---- */
+  const searchInput = document.getElementById('q');
+  if (searchInput && rawQuery) searchInput.value = rawQuery;
+
+  const cards = document.querySelectorAll('.product-card');
+  if (!rawQuery || cards.length === 0) return; // no search, or not the shop page
+
+  const clean = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const words = rawQuery.split(/\s+/)
+    .map(w => clean(w).replace(/s$/, '')) // "hoodies" -> "hoodie"
+    .filter(Boolean);
+
+  let matches = 0;
+  cards.forEach(card => {
+    const text = clean(card.querySelector('h2').textContent);
+    const isMatch = words.every(w => text.includes(w));
+    card.style.display = isMatch ? '' : 'none';
+    if (isMatch) matches++;
+  });
+
+  const noResults = document.getElementById('no-results');
+  if (noResults) {
+    noResults.innerHTML = `No products found for "${rawQuery.replace(/</g, '&lt;')}". <a href="shop.html">Show all products</a>`;
+    noResults.hidden = matches > 0;
+  }
+});
+
+if (box) {
+  document.querySelectorAll('.look').forEach(btn => {
+    btn.addEventListener('click', () => {
+      boxImg.src = btn.dataset.src;
+      boxImg.alt = btn.dataset.alt || '';
+      boxCap.textContent = btn.dataset.caption;
+      box.showModal();
+    });
+  });
+
+  document.getElementById('lightbox-close').addEventListener('click', () => box.close());
+  box.addEventListener('click', e => { if (e.target === box) box.close(); });
 }

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -25,6 +26,11 @@
             <a href="join_the_icons.html">Join the Icons</a>
             <a href="contact_us.html" class="active">Contact us</a>
         </nav>
+         <form class="site-search" action="shop.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Search products</label>
+          <input type="search" id="q" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
     </header>
 
     <hr>
@@ -44,6 +50,11 @@
 
         <button type="submit" class="btn">Send message</button>
  </form>
+
+ <section class="map-section">
+  <h2>Find Us</h2>
+  <div id="map" role="region" aria-label="Map showing Grey Pitori location in Pretoria"></div>
+</section>
 
     <hr>
 
@@ -95,6 +106,11 @@
             </p>
         </div>
     </footer>
+
+    <script src="map.js"></script>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1oW1gT3_4rwToZv34k2p-fZeKt4bxsf4&callback=initMap">
+    </script>
 
 </body>
 </html>
