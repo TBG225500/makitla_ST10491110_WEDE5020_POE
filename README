@@ -1,8 +1,8 @@
-Student Information
+# Student Information
+
 Thabang Makitla
 ST10491110
 DITM
-
 
 GREY PITORI
 A South African lifestyle brand inspired by Pretoria, also known as Pitori. The brand represents the intersection of people, cultures, perspectives and ambition.
@@ -81,6 +81,7 @@ Changelog
 (All notable changes made to the Grey Pitori website are documented in this file.)
 10 August 2026 - 21 October 2026
 Added
+
 - Created the initial Grey Pitori website structure using HTML.
 - Added website navigation links, including Home, About Us, Shop, and Contact Us.
 - Created the main homepage layout.
@@ -88,8 +89,12 @@ Added
 - Added website content to introduce the Grey Pitori brand.
 - Created and linked an external style.css file for website styling.
 - Added Git version control to track changes to the project.
+- Added a validation form.
+- Added a shop categories feature on the home page.
+- Added borders on the form in the contact us page.
 
 Changed
+
 - Improved the navigation bar styling and layout.
 - Updated the active navigation link to display an underline on the current page.
 - Improved the positioning and alignment of website elements.
@@ -98,6 +103,7 @@ Changed
 - Improved product image presentation and layout.
 
 Fixed
+
 - Fixed issues with the CSS stylesheet not applying correctly.
 - Corrected navigation underline behaviour between pages.
 - Fixed page visibility issues when navigating between website sections.
@@ -106,8 +112,10 @@ Fixed
 - Fixed layout issues affecting the appearance of website elements.
 
 In Progress
+
 - Further improving the website's responsiveness and overall user experience.
 - Continuing to refine the website's visual design and layout.
+- Trying to make the form on the contact us page.
 
 References
 Visual Studio Code.(2026). Visual Studio Code. Available at: [VsCode](https://code.visualstudio.com/)
