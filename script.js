@@ -1,6 +1,8 @@
 function toggleMenu() {
+  Event.preventDefault();
   document.getElementById("toplinks").classList.toggle("active");
 }
+
 
 /* ---- Lookbook ---- */
     function initLookbook() {
@@ -135,3 +137,30 @@ if (box) {
   document.getElementById('lightbox-close').addEventListener('click', () => box.close());
   box.addEventListener('click', e => { if (e.target === box) box.close(); });
 }
+
+/* ---- Join the Icons sign up form ---- */
+  const form = document.getElementById("joinForm");
+  const thankYou = document.getElementById("thankYou");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();      // stops the page from reloading
+    form.hidden = true;          // hides the form
+    thankYou.hidden = false;     // shows the message
+  });
+
+/* ---- Contact form ---- */
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+    const contactThanks = document.getElementById("contactThanks");
+
+    if (!contactForm || !contactThanks) {
+      console.error("Form or message element not found. Check the ids.");
+      return;
+    }
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      contactForm.hidden = true;
+      contactThanks.hidden = false;
+    });
+  });
