@@ -632,6 +632,24 @@ input[type="text"], input[type="email"], input[type="tel"], select.input, textar
 }
 
 
+@media (max-width: 768px) {
+  .contact-section,
+  .contact-wrapper {
+    display: block;
+    padding: 0 1rem;
+  }
+  form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 /* ---- Map section ---- */
 .map-section {
