@@ -17,7 +17,12 @@ input, button { font: inherit; color: inherit; }
   --gp-grey:       #6f6f6c;
   --gp-grey-light: #d9d8d4;
   --gp-line:       #d3d2ce;
-
+  --white: var(--gp-white);
+  --black: var(--gp-black);
+  --line: 2px;
+  --pad: 1rem;
+  --display: var(--font-display);
+  --g600: var(--gp-grey);
   --font-display: 'Archivo Black', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -594,34 +599,37 @@ input[type="text"], input[type="email"], input[type="tel"], select.input, textar
   box-sizing: border-box;
 }
 
+#contactForm {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 2px solid #000;
+}
+
+#contactForm label {
+  display: block;
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
 #contactForm input,
 #contactForm textarea {
-  border: 2px solid #000;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
   padding: 10px;
-  width: 50%;
-  box-sizing: border-box;
+  border: 2px solid #000;
   border-radius: 4px;
   background: #fff;
   color: #000;
   font-family: inherit;
-  margin-left: 355px;
-  align-items: center;
+  box-sizing: border-box;
 }
 
 #contactForm input:focus,
 #contactForm textarea:focus {
   outline: none;
-  border-color: #000;
-  box-shadow: 0 0 0 2px #888; /* grey glow when selected */
-}
-
-#contactForm label {
-  display: block;
-  margin-left: 355px;
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-weight: bold;
-  align-items: center;
+  box-shadow: 0 0 0 2px #888;
 }
 
 .form-message {
@@ -631,25 +639,10 @@ input[type="text"], input[type="email"], input[type="tel"], select.input, textar
   text-align: center;
 }
 
+.form-message[hidden] { display: none; }
 
-@media (max-width: 768px) {
-  .contact-section,
-  .contact-wrapper {
-    display: block;
-    padding: 0 1rem;
-  }
-  form {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
 
-  input,
-  textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-}
+@media (max-width: 768px) {}
 
 /* ---- Map section ---- */
 .map-section {

@@ -149,18 +149,8 @@ if (box) {
   });
 
 /* ---- Contact form ---- */
-  document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.getElementById("contactForm");
-    const contactThanks = document.getElementById("contactThanks");
-
-    if (!contactForm || !contactThanks) {
-      console.error("Form or message element not found. Check the ids.");
-      return;
-    }
-
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      contactForm.hidden = true;
-      contactThanks.hidden = false;
-    });
-  });
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('formMessage').hidden = false;
+  this.reset();
+}); 
