@@ -110,12 +110,12 @@ Fixed
 - Corrected footer alignment issues.
 - Addressed button interaction and clickability issues.
 - Fixed layout issues affecting the appearance of website elements.
+- Fixed my contact us form so that after filling in your details and send the message you receive a response.
 
 In Progress
 
 - Further improving the website's responsiveness and overall user experience.
 - Continuing to refine the website's visual design and layout.
-- Trying to make the form on the contact us page.
 
 References
 Visual Studio Code.(2026). Visual Studio Code. Available at: [VsCode](https://code.visualstudio.com/)
