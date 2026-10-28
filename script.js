@@ -143,9 +143,9 @@ if (box) {
   const thankYou = document.getElementById("thankYou");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault();      // stops the page from reloading
-    form.hidden = true;          // hides the form
-    thankYou.hidden = false;     // shows the message
+    event.preventDefault();      
+    form.hidden = true;          
+    thankYou.hidden = false;     
   });
 
 /* ---- Contact form ---- */
